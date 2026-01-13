@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# SPA fallback (Vite + client-side routing not used heavily, but safe)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
